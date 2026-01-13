@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>lolesbait</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="wrap header">
+    <div class="brand">lolesbait</div>
+    <div class="hint">v2</div>
+  </header>
+
+  <main class="wrap">
+    <!-- PANTALLA INICIAL NORMAL -->
+    <section class="card hero" id="hero">
+      <h1 class="h1">lol es bait</h1>
+      <p class="sub">Clica aquí per continuar.</p>
+      <div class="row">
+        <button class="btn" id="enterBtn">Clica aquí</button>
+        <a class="btn" href="casi.html">Últim pas</a>
+      </div>
+      <p class="small">Accés “segur”. Verificació instantània.</p>
+    </section>
+
+    <!-- ZONA BAIT -->
+    <section class="card" id="baitZone" hidden>
+      <div class="baitWall" id="baitWall"></div>
+
+      <p class="sub" style="margin-top:12px;">
+        Contingut privat. Les fotos són a baix.
+      </p>
+      <p class="small">Clica a una foto per “veure-la”.</p>
+
+      <!-- GALERIA PIXELADA -->
+      <div class="grid" id="pixelGrid"></div>
+
+      <!-- VISOR -->
+      <div class="viewer" id="viewer" hidden>
+        <div class="viewerTop">
+          <div class="viewerTitle">Imatge oberta: <span id="currentName">—</span></div>
+          <a class="btn" href="casi.html">Últim pas</a>
+        </div>
+
+        <img id="bigImg" class="big" alt="Imatge oberta" />
+
+        <div class="row">
+          <a href="#viewer" class="btn">Veure resultats</a>
+          <button class="btn" id="nextBtn">Una altra</button>
+          <button class="btn" id="moveBtn">Clica aquí (fàcil)</button>
+          <button class="btn" id="loadBtn">Carregar contingut</button>
+          <button class="btn" id="dlBtn">Descarregar</button>
+        </div>
+
+        <div class="status" id="status"></div>
+
+        <!-- Loading infinit -->
+        <div class="loader" id="loader" hidden>
+          <div class="spinner"></div>
+          <div class="loaderText" id="loaderText">Carregant…</div>
+          <button class="btn tiny" id="cancelFake">Cancel·lar</button>
+        </div>
+
+        <!-- Progrés 99% -->
+        <div class="progressWrap" id="progressWrap" hidden>
+          <div class="progressTop">
+            <div class="small" id="progressLabel">Descarregant…</div>
+            <div class="small" id="progressPct">0%</div>
+          </div>
+          <div class="track"><div class="bar" id="progressBar" style="width:0%"></div></div>
+          <div class="small" id="progressNote">—</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCROLL INFINIT BUIT -->
+    <section class="card">
+      <h2 class="h2">La resposta està més avall</h2>
+      <p class="sub">Segueix fent scroll. No hi ha res.</p>
+      <div class="void">
+        <p class="sub" id="voidMsg" style="margin:0;">Encara més avall.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
